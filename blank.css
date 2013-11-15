@@ -3,7 +3,7 @@
  * Kopimi license http://www.kopimi.com/kopimi
  * @author Kopirat http://kopirat.github.io
  */
- /* Configurable Design
+ /* Customizable Design
 ============================== */
 /* Useless Crap
 ============================== */
@@ -51,13 +51,6 @@ input[type=tel] {
   padding: .3em .5em;
 }
 
-#picker {
-  color: #0f0;
-}
-#picker:hover {
-  background: none;
-}
-
 /* HTML5 Inputs
 ============================== */
 input[type=date],
@@ -71,13 +64,6 @@ input[type=week] {
   color: #444;
   font: 16px Helvetica, Arial;
   padding: .3em .5em;
-}
-input[type=date]:hover *,
-input[type=datetime-local]:hover *,
-input[type=month]:hover *,
-input[type=time]:hover *,
-input[type=week]:hover * {
-  background: white;
 }
 
 /* Select tag
