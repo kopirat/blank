@@ -1,0 +1,77 @@
+/**
+ * Blank.CSS: Fix Browser's Bullshit 
+ * Kopimi license http://www.kopimi.com/kopimi
+ * @author Kopirat http://kopirat.github.io
+ */
+
+ /* Customizable Design
+============================== */
+
+@mixin design {
+	background: #fff;
+	border: solid #ddd .1em;
+	border-radius: .25em;
+	color: #444;
+	font: 16px Helvetica, Arial;
+	padding: .3em .5em;
+}
+
+/* Useless Crap
+============================== */
+
+::-moz-focus-inner {
+	border: none
+}
+
+// firefox dotted outline
+// webkit outline
+:focus {
+	outline: none
+}
+
+::-webkit-inner-spin-button {
+	-webkit-appearance: none;
+	display: none
+}
+
+/* Buttons
+============================== */
+input[type=button],
+input[type=reset],
+input[type=submit]
+ {
+ 	@include design();
+ }
+
+/* Text Inputs
+============================== */
+input[type=datetime],
+input[type=email], 
+input[type=number], 
+input[type=password], 
+input[type=search], 
+input[type=text],
+input[type=url],
+input[type=tel] 
+{
+	@include design();
+}
+
+/* HTML5 Inputs
+============================== */
+input[type=date],
+input[type=datetime-local],
+input[type=month],
+input[type=time],
+input[type=week]
+{
+	@include design();
+}
+
+/* Select tag
+============================== */
+
+select
+{
+	@include design();
+}
