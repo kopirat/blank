@@ -22,6 +22,7 @@
 
 /* Buttons
 ============================== */
+button,
 input[type=button],
 input[type=reset],
 input[type=submit] {
@@ -30,7 +31,7 @@ input[type=submit] {
   border-radius: .25em;
   color: #444;
   font: 16px Helvetica, Arial;
-  padding: .3em .5em;
+  padding: .25em .5em;
 }
 
 /* Text Inputs
@@ -48,7 +49,7 @@ input[type=tel] {
   border-radius: .25em;
   color: #444;
   font: 16px Helvetica, Arial;
-  padding: .3em .5em;
+  padding: .25em .5em;
 }
 
 /* HTML5 Inputs
@@ -63,7 +64,41 @@ input[type=week] {
   border-radius: .25em;
   color: #444;
   font: 16px Helvetica, Arial;
-  padding: .3em .5em;
+  padding: .25em .5em;
+}
+
+/* Range Input
+============================== */
+input[type=range] {
+  -webkit-appearance: none;
+  background: #ddd;
+  height: .5em;
+  border-radius: .2em;
+  min-width: 150px;
+}
+
+::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background: #bbb;
+  border-radius: 50%;
+  height: 1.5em;
+  width: 1.5em;
+}
+::-webkit-slider-thumb:active {
+  background: #007bff;
+}
+
+::-moz-range-thumb {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background: #bbb;
+  border-radius: 50%;
+  height: 1.5em;
+  width: 1.5em;
+}
+::-moz-range-thumb:active {
+  background: #007bff;
 }
 
 /* Select tag
@@ -74,5 +109,5 @@ select {
   border-radius: .25em;
   color: #444;
   font: 16px Helvetica, Arial;
-  padding: .3em .5em;
+  padding: .25em .5em;
 }

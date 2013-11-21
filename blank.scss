@@ -7,13 +7,33 @@
  /* Customizable Design
 ============================== */
 
-@mixin design {
+@mixin buttons {
 	background: #fff;
 	border: solid #ddd .1em;
 	border-radius: .25em;
 	color: #444;
 	font: 16px Helvetica, Arial;
-	padding: .3em .5em;
+	padding: .25em .5em;
+}
+
+@mixin inputs {
+	background: #fff;
+	border: solid #ddd .1em;
+	border-radius: .25em;
+	color: #444;
+	font: 16px Helvetica, Arial;
+	padding: .25em .5em;
+}
+
+@mixin inputRange {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	background: #bbb;
+	border-radius: 50%;
+	height: 1.5em;
+	width: 1.5em;
+
+	&:active { background: #007bff }
 }
 
 /* Useless Crap
@@ -36,11 +56,12 @@
 
 /* Buttons
 ============================== */
+button,
 input[type=button],
 input[type=reset],
 input[type=submit]
  {
- 	@include design();
+ 	@include buttons();
  }
 
 /* Text Inputs
@@ -54,7 +75,7 @@ input[type=text],
 input[type=url],
 input[type=tel] 
 {
-	@include design();
+	@include inputs();
 }
 
 /* HTML5 Inputs
@@ -65,7 +86,26 @@ input[type=month],
 input[type=time],
 input[type=week]
 {
-	@include design();
+	@include inputs();
+}
+
+/* Range Input
+============================== */
+input[type=range]
+{
+	-webkit-appearance: none;
+	background: #ddd;
+	height: .5em;
+	border-radius: .2em;
+	min-width: 150px;
+}
+::-webkit-slider-thumb
+{
+	@include inputRange();
+}
+::-moz-range-thumb
+{
+	@include inputRange();
 }
 
 /* Select tag
@@ -73,5 +113,5 @@ input[type=week]
 
 select
 {
-	@include design();
+	@include inputs();
 }
